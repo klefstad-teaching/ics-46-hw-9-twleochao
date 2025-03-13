@@ -48,8 +48,6 @@ void print_path(const vector<int>& v, int total) {
         cout << "No path found\n";
         return;
     }
-    for (int i = 0; i < v.size(); i++){
-        cout << v[i] << " ";
-    }
+    for (int i = 0; i < v.size(); i++) cout << v[i] << " ";
     cout << "\nTotal cost is " << total << "\n";
 }
