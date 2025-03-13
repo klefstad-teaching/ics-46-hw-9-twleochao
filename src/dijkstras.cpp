@@ -1,13 +1,14 @@
 #include "dijkstras.h"
 
+
 vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& previous) {
     int n = G.numVertices;
     vector<int> distance(n, INF);
     vector<bool> vis(n, 0);
     previous.resize(n, -1);
 
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq;
-    pq.push({source, 0});
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    pq.push({0, source});
     distance[source] = 0;
 
     while (!pq.empty()) {

@@ -4,7 +4,7 @@ void call_dijkstra(string file_path) {
     Graph G;
     file_to_graph(file_path, G);
     vector<int> previous;
-    vector<int> distances = dijkstra_shortest_path(G, 0, previous);
+    vector<int> distances = dijkstra_shortest_path(G, 1, previous);
     for (int i = 0; i < distances.size(); i++) {
         vector<int> path = extract_shortest_path(distances, previous, i);
         print_path(path, distances[i]);
